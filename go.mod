@@ -1,4 +1,4 @@
-module github.com/sirin7/final-main
+module github.com/sirin7/sprint_12
 
 go 1.22.5
 

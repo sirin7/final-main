@@ -55,6 +55,7 @@ func (s ParcelService) PrintClientParcels(client int) error {
 	parcels, err := s.store.GetByClient(client)
 	if err != nil {
 		return err
+
 	}
 
 	fmt.Printf("Посылки клиента %d:\n", client)

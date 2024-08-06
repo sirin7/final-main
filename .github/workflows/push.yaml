@@ -36,7 +36,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5.5.1
         with:
-          images: sirin07/final-main
+          images: sirin07/sprint_12
 
       - name: Build and push Docker Inage
         uses: docker/build-push-action@v6.5.0
