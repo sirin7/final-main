@@ -1,11 +1,13 @@
-FROM golang:1.22
+FROM golang:1.22.5
 
 WORKDIR /app
 
-COPY . .
+COPY go.mod go.sum ./
 
-RUN go mod tidy
+RUN go mod download
+
+COPY . .
 
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /my_app
 
-CMD ["/my_app"]
+CMD ["/my_app"]    
